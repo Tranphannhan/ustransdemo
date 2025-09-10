@@ -8,16 +8,30 @@
     "scheme": "ustransdemo",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
-    },
+   "ios": {
+  "supportsTablet": true,
+  "infoPlist": {
+    "NSLocationWhenInUseUsageDescription": "Ứng dụng cần truy cập vị trí của bạn"
+  },
+  "config": {
+    "googleMapsApiKey": "AIzaSyDH0B4_mhcDp4UG9uNTStkSF4oWmgMUlrc"
+  }
+},
+"android": {
+  "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"],
+  "adaptiveIcon": {
+    "foregroundImage": "./assets/images/adaptive-icon.png",
+    "backgroundColor": "#ffffff"
+  },
+  "edgeToEdgeEnabled": true,
+  "config": {
+    "googleMaps": {
+      "apiKey": "AIzaSyDH0B4_mhcDp4UG9uNTStkSF4oWmgMUlrc"
+    }
+  },
+  "package": "com.tranphannhan.ustransdemo"
+}
+,
     "web": {
       "bundler": "metro",
       "output": "static",
