@@ -4,11 +4,17 @@ const Connect_Data_Model = new Connect_Select_Model();
 
 class User_Controler {
     Select = async (req, res, next) => {
-        res.send('Yes');
+        const _id = req.params.ID;
+        Connect_Data_Model.Select_M(_id, (error, result) => {
+            if (error) return next(error);
+            res.status(200).json({ data: result });
+        });
     }
 
-    Add = async (req, res, next) => {
-        const data = {
+
+    Update = async (req, res, next) => {
+        const _id = req.params.ID;
+        const dataEdit = {
             lat: req.body.lat,
             lng: req.body.lng,
             speed: req.body.speed,
@@ -16,11 +22,13 @@ class User_Controler {
             updatedAt: req.body.updatedAt
         }
 
-        Connect_Data_Model.Add__M(data, (error, result) => {
+        Connect_Data_Model.Update__M(_id, dataEdit, (error, result) => {
             if (error) return next(error);
-            res.status(201).json({ message: 'Thêm thành công' });
+            res.status(201).json({ message: 'Update thành công' });
         });
     }
+
+
 }
 
 module.exports = User_Controler

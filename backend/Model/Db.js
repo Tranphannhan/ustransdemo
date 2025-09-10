@@ -4,9 +4,7 @@ require("dotenv").config();
 
 async function connectDB() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: process.env.DB_NAME,
-    });
+    await mongoose.connect('mongodb+srv://tranphannhan:oLVT47GDg2GMj9mb@cluster0.av1kh.mongodb.net/Ustrans?retryWrites=true&w=majority&appName=Cluster0')
     console.log("✅ Kết nối Server MXH Thành Công!");
   } catch (error) {
     console.error("❌ Lỗi kết nối MongoDB:", error.message);

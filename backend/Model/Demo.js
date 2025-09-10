@@ -2,10 +2,10 @@ const connectDB = require("./Db");
 const connectSchema = require("../Schema/Demo");
 
 class Database_Acount {
-    Select_M = async (Callback) => {
+    Select_M = async (id, Callback) => {
         try {
             await connectDB();
-            const result = await connectSchema.find({});
+            const result = await connectSchema.find({ _id: id });
             Callback(null, result);
         } catch (error) {
             Callback(error);
@@ -13,13 +13,13 @@ class Database_Acount {
     };
 
 
-    Add__M = async (dataAddNew, Callback) => {
+    Update__M = async (id, dataAddNew, Callback) => {
         try {
-            const addNew = new connectSchema(dataAddNew);
-            const result = await addNew.save();
+            await connectDB();
+            const result = await connectSchema.findByIdAndUpdate(id, dataAddNew, { new: true });
             Callback(null, result);
         } catch (error) {
-            console.log(error);
+            Callback(error);
         }
     }
 
