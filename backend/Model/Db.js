@@ -14,9 +14,3 @@ async function connectDB() {
 }
 
 module.exports = connectDB;
-
-
-// User Name 
-// huanndps38821_db_user
-// Password
-// 6ZKkfze47VrK6AZC
