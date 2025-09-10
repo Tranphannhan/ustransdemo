@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var Router_Demo = require('./routes/Demo');
-var app = express();
+const Router_Demo = require('./routes/Demo');
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

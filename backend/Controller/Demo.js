@@ -7,7 +7,6 @@ class User_Controler {
         res.send('Yes');
     }
 
-
     Add = async (req, res, next) => {
         const data = {
             lat: req.body.lat,
@@ -22,8 +21,6 @@ class User_Controler {
             res.status(201).json({ message: 'Thêm thành công' });
         });
     }
-
-
 }
 
 module.exports = User_Controler
