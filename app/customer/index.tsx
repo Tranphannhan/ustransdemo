@@ -31,6 +31,7 @@ export default function CustomerHome() {
         >
           <Text style={styles.buttonText}>Đặt container</Text>
         </TouchableOpacity>
+<<<<<<< HEAD
 
          <TouchableOpacity 
           style={styles.button}
@@ -38,6 +39,8 @@ export default function CustomerHome() {
         >
           <Text style={styles.buttonText}>Map</Text>
         </TouchableOpacity>
+=======
+>>>>>>> 7425e83728c78d227f3c4663064fa74322e3b3b3
         
         <TouchableOpacity 
           style={[styles.button, styles.logoutButton]}

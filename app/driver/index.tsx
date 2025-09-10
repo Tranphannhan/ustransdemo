@@ -2,7 +2,11 @@ import { useRouter } from "expo-router";
 import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useAuth } from "../../contexts/AuthContext";
 
+<<<<<<< HEAD
 export default function CustomerHome() {
+=======
+export default function DriverHome() {
+>>>>>>> 7425e83728c78d227f3c4663064fa74322e3b3b3
   const router = useRouter();
   const { user, logout } = useAuth();
 
@@ -20,7 +24,11 @@ export default function CustomerHome() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
+<<<<<<< HEAD
         <Text style={styles.title}>Xin chào Khách hàng 👤</Text>
+=======
+        <Text style={styles.title}>Xin chào Tài xế 👨‍✈️</Text>
+>>>>>>> 7425e83728c78d227f3c4663064fa74322e3b3b3
         <Text style={styles.subtitle}>SĐT: {user?.phone}</Text>
       </View>
       
@@ -29,6 +37,7 @@ export default function CustomerHome() {
           style={styles.button}
           onPress={() => router.push("/driver/orders")}
         >
+<<<<<<< HEAD
           <Text style={styles.buttonText}>Đơn</Text>
         </TouchableOpacity>
 
@@ -37,6 +46,9 @@ export default function CustomerHome() {
           onPress={() => router.push("/driver/updatemap")}
         >
           <Text style={styles.buttonText}>Cập nhật map</Text>
+=======
+          <Text style={styles.buttonText}>Xem đơn hàng</Text>
+>>>>>>> 7425e83728c78d227f3c4663064fa74322e3b3b3
         </TouchableOpacity>
         
         <TouchableOpacity 
